@@ -8,7 +8,7 @@ COPY . /app
 # Install Flask and other dependencies
 RUN pip install --no-cache-dir -r reqdev.txt
 
-EXPOSE 5000
+EXPOSE 7070
 
 ENV NAME World
 
