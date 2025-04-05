@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>QUICKOO</title>
+    <link rel="shortcut icon" href="/static/external/favicon.png" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;display=swap">
+    <link rel="stylesheet" href="/static/css/plugins.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+
+<body onload="initAutocomplete()">
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-wrapper">
+                <a class="logo" href="/"> <img src="/static/img/logo-light.png" class="logo-img" alt=""> </a>
+                <!-- <a class="logo" href="index.html"><h2>Renta<span>x</span></h2></a> -->
+            </div>
+            <!-- Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span> </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                </ul>
+                <div class="navbar-right">
+                    <div class="wrap">
+                        <div class="icon"> <i class="flaticon-phone-call"></i> </div>
+                        <div class="text">
+                            <p>Need help?</p>
+                            <h5><a href="tel:9601406607">9601406607</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Header Video -->
+    <header class="header">
+        <div class="video-fullscreen-wrap">
+            <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
+            <div class="video-fullscreen-video" data-overlay-dark="2">
+                <video playsinline="" autoplay="" loop="" muted="">
+                    <source src="/static/external/intro.mp4" type="video/mp4" autoplay="" loop="" muted="">
+                    <source src="/static/external/intro.mp4" type="video/webm" autoplay="" loop="" muted="">
+                </video>
+            </div>
+            <div class="v-middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h6 style="font-weight: 800;">* Premium Shuttles</h6>
+                            <h1>Make your dream live</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Process Number -->
+    <section class="process-number mt--120 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-30">
+                    <div class="item">
+                        <div class="con">
+                            <div class="no">1</div>
+                            <h5>Find a Ride</h5>
+                            <p>Browse available rides, choose a driver going your way, and pick the best match based on
+                                timing, price, and preferences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-30">
+                    <div class="item">
+                        <div class="con">
+                            <div class="no">2</div>
+                            <h5>Connect with the Driver</h5>
+                            <p>Message the driver directly through the app to coordinate details, ask questions, or
+                                confirm the meeting point.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-30">
+                    <div class="item">
+                        <div class="con">
+                            <div class="no">3</div>
+                            <h5>Enjoy the Journey</h5>
+                            <p>Hop in, relax, and share the ride. Save money, reduce emissions, and meet new people
+                                along the way.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About -->
+    <section class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-30">
+                    <div class="content">
+                        <div class="section-subtitle">QUICKOO</div>
+                        <div class="section-title">We Are More Than <span>Just a Carpooling Service</span></div>
+                        <p class="mb-30">We're building a smarter, greener, and more social way to travel. Whether
+                            you're commuting to work, heading out for a weekend trip, or just looking to split costs—our
+                            platform connects drivers and riders going the same way. <br>Enjoy affordable, comfortable
+                            rides while reducing traffic and emissions.</p>
+                        <ul class="list-unstyled list mb-30">
+                            <li>
+                                <div class="list-icon"> <span class="ti-check"></span> </div>
+                                <div class="list-text">
+                                    <p>Verified Drivers & Riders</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list-icon"> <span class="ti-check"></span> </div>
+                                <div class="list-text">
+                                    <p>Flexible Routes & Schedules</p>
+                                </div>
+                            </li>
+                        </ul> <a href="/about" class="button-1">Read More <span class="ti-arrow-top-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 col-md-12">
+                    <div class="item"> <img src="/static/img/about.jpg" class="img-fluid" alt="">
+                        <div class="curv-butn icon-bg">
+                            <a href="http://127.0.0.1:5000/static/external/Ride Booking Animation Concept_free.mp4"
+                                class="vid">
+                                <div class="icon"> <i class="ti-control-play"></i> </div>
+                            </a>
+                            <div class="br-left-top">
+                                <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                    class="w-11 h-11">
+                                    <path
+                                        d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                        fill="#1b1b1b"></path>
+                                </svg>
+                            </div>
+                            <div class="br-right-bottom">
+                                <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                    class="w-11 h-11">
+                                    <path
+                                        d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                        fill="#1b1b1b"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- divider line -->
+    <div class="line-vr-section"></div>
+    <!-- Car Category -->
+    <section class="car-types4 section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-30">
+                    <div class="section-subtitle">QUICKOO</div>
+                    <div class="section-title">Our <span>Services</span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item mb-15">
+                            <div class="img"> <img src="/static/external/service4.jpg" class="img-fluid" alt=""
+                                    style="opacity: 0.7;"> </div>
+                            <div class="info">
+                                <h2 class="title">Intercity Ride Sharing</h2>
+                                <p class="subtitle">Connect with nearby riders and travel affordably between cities.</p>
+                            </div>
+                            <div class="curv-butn icon-bg">
+                                <div class="icon" style="margin-left: 15px; margin-top: 15px;"> <i
+                                        class="ti-arrow-top-right"></i> </div>
+                                <div class="br-left-top">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                                <div class="br-right-bottom">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item mb-15">
+                            <div class="img"> <img src="/static/external/service5.jpg" class="img-fluid" alt=""
+                                    style="opacity: 0.7;"> </div>
+                            <div class="info">
+                                <h2 class="title">Outstation Travel</h2>
+                                <p class="subtitle">Plan long-distance journeys with comfort and convenience.</p>
+                            </div>
+                            <div class="curv-butn icon-bg">
+                                <div class="icon" style="margin-left: 15px; margin-top: 15px;"> <i
+                                        class="ti-arrow-top-right"></i> </div>
+                                <div class="br-left-top">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                                <div class="br-right-bottom">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item mb-15">
+                            <div class="img"> <img src="/static/external/service11.jpg" class="img-fluid" alt=""
+                                    style="opacity: 0.7;"> </div>
+                            <div class="info">
+                                <h2 class="title">Bike Pooling</h2>
+                                <p class="subtitle">Beat the traffic and reduce your commute cost.</p>
+                            </div>
+                            <div class="curv-butn icon-bg">
+                                <div class="icon" style="margin-left: 15px; margin-top: 15px;"> <i
+                                        class="ti-arrow-top-right"></i> </div>
+                                <div class="br-left-top">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                                <div class="br-right-bottom">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item mb-15">
+                            <div class="img"> <img src="/static/external/service7.jpg" class="img-fluid" alt=""
+                                    style="opacity: 0.7;"> </div>
+                            <div class="info">
+                                <h2 class="title">Auto Pooling</h2>
+                                <p class="subtitle">Perfect for short trips and last-mile connectivity.</p>
+                            </div>
+                            <div class="curv-butn icon-bg">
+                                <div class="icon" style="margin-left: 15px; margin-top: 15px;"> <i
+                                        class="ti-arrow-top-right"></i> </div>
+                                <div class="br-left-top">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                                <div class="br-right-bottom">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item mb-15">
+                            <div class="img"> <img src="/static/external/service8.jpg" class="img-fluid" alt=""
+                                    style="opacity: 0.7;"> </div>
+                            <div class="info">
+                                <h2 class="title">Driver Network</h2>
+                                <p class="subtitle">We connect passengers with verified drivers—whether it's a car,
+                                    bike, or auto.</p>
+                            </div>
+                            <div class="curv-butn icon-bg">
+                                <div class="icon" style="margin-left: 15px; margin-top: 15px;"> <i
+                                        class="ti-arrow-top-right"></i> </div>
+                                <div class="br-left-top">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                                <div class="br-right-bottom">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- divider line -->
+    <div class="line-vr-section"></div>
+    <!-- Testimonials -->
+    <section class="testimonials section-padding mt-15">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-30">
+                    <div class="section-subtitle">Testimonials</div>
+                    <div class="section-title">What Clients Say</div>
+                </div>
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="stars"> <span class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <div class="shap-left-top">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                                <div class="shap-right-bottom">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                            </div> <i class="fa-solid fa-quote-left"></i>
+                            <div class="text">
+                                <p>Lorem posuere in miss drana en the nisan semere sceriun amiss etiam ornare in the
+                                    miss drana is lorem fermen nunta urnase mauris in the interdum.</p>
+                            </div>
+                            <div class="info mt-30">
+                                <div class="img-curv">
+                                    <div class="img"> <img src="/static/img/team/1.jpg" alt=""> </div>
+                                    <div class="shap-left-top">
+                                        <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            class="w-11 h-11">
+                                            <path
+                                                d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                                fill="#1b1b1b"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="shap-right-bottom">
+                                        <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            class="w-11 h-11">
+                                            <path
+                                                d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                                fill="#1b1b1b"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-30">
+                                    <h6>Dan Martin</h6>
+                                    <p>Customer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="stars"> <span class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <div class="shap-left-top">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                                <div class="shap-right-bottom">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                            </div> <i class="fa-solid fa-quote-left"></i>
+                            <div class="text">
+                                <p>Lorem posuere in miss drana en the nisan semere sceriun amiss etiam ornare in the
+                                    miss drana is lorem fermen nunta urnase mauris in the interdum.</p>
+                            </div>
+                            <div class="info mt-30">
+                                <div class="img-curv">
+                                    <div class="img"> <img src="/static/img/team/4.jpg" alt=""> </div>
+                                    <div class="shap-left-top">
+                                        <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            class="w-11 h-11">
+                                            <path
+                                                d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                                fill="#1b1b1b"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="shap-right-bottom">
+                                        <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            class="w-11 h-11">
+                                            <path
+                                                d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                                fill="#1b1b1b"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-30">
+                                    <h6>Olivia Brown</h6>
+                                    <p>Customer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="stars"> <span class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <div class="shap-left-top">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                                <div class="shap-right-bottom">
+                                    <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-11 h-11">
+                                        <path
+                                            d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                            fill="#1b1b1b"></path>
+                                    </svg>
+                                </div>
+                            </div> <i class="fa-solid fa-quote-left"></i>
+                            <div class="text">
+                                <p>Lorem posuere in miss drana en the nisan semere sceriun amiss etiam ornare in the
+                                    miss drana is lorem fermen nunta urnase mauris in the interdum.</p>
+                            </div>
+                            <div class="info mt-30">
+                                <div class="img-curv">
+                                    <div class="img"> <img src="/static/img/team/6.jpg" alt=""> </div>
+                                    <div class="shap-left-top">
+                                        <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            class="w-11 h-11">
+                                            <path
+                                                d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                                fill="#1b1b1b"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="shap-right-bottom">
+                                        <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            class="w-11 h-11">
+                                            <path
+                                                d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                                fill="#1b1b1b"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-30">
+                                    <h6>Emily Martin</h6>
+                                    <p>Customer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- divider line -->
+    <div class="line-vr-section"></div>
+    <!-- Blog 1 -->
+    <section class="blog1 section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-30">
+                    <div class="section-subtitle">Our Blog</div>
+                    <div class="section-title">Latest <span>News</span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="img"> <img src="/static/external/service9.jpg" alt=""> </div>
+                            <div class="wrapper">
+                                <div class="date"> <a href="/">29 Dec, 2025</a> </div>
+                                <div class="con">
+                                    <div class="category"> <a href="/"><i class="ti-user"></i>Olivia D.</a> <a
+                                            href="/"><i class="ti-comment"></i>5 Comments</a> </div>
+                                    <div class="text"> <a href="/">Documents required for car rental</a> </div> <a
+                                        href="/" class="icon-btn"><i class="ti-arrow-top-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img"> <img src="/static/external/service10.jpg" alt=""> </div>
+                            <div class="wrapper">
+                                <div class="date"> <a href="/">27 Dec, 2025</a> </div>
+                                <div class="con">
+                                    <div class="category"> <a href="/"><i class="ti-user"></i>Martin C.</a> <a
+                                            href="/"><i class="ti-comment"></i>5 Comments</a> </div>
+                                    <div class="text"> <a href="/">Rental cost of sport and other cars</a> </div> <a
+                                        href="/" class="icon-btn"><i class="ti-arrow-top-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img"> <img src="/static/external/service8.jpg" alt=""> </div>
+                            <div class="wrapper">
+                                <div class="date"> <a href="/">25 Dec, 2025</a> </div>
+                                <div class="con">
+                                    <div class="category"> <a href="/"><i class="ti-user"></i>Martin C.</a> <a
+                                            href="/"><i class="ti-comment"></i>5 Comments</a> </div>
+                                    <div class="text"> <a href="/">Rental cars how to check driving fines?</a> </div> <a
+                                        href="/" class="icon-btn"><i class="ti-arrow-top-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img"> <img src="/static/external/service3.jpg" alt=""> </div>
+                            <div class="wrapper">
+                                <div class="date"> <a href="/">23 Dec, 2025</a> </div>
+                                <div class="con">
+                                    <div class="category"> <a href="/"><i class="ti-user"></i>Arya T.</a> <a href="/"><i
+                                                class="ti-comment"></i>5 Comments</a> </div>
+                                    <div class="text"> <a href="/">How to Rent a Car at the Airport Terminal?</a> </div>
+                                    <a href="/" class="icon-btn"><i class="ti-arrow-top-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img"> <img src="/static/external/service1.jpg" alt=""> </div>
+                            <div class="wrapper">
+                                <div class="date"> <a href="blog1.html">22 Dec, 2025</a> </div>
+                                <div class="con">
+                                    <div class="category"> <a href="/"><i class="ti-user"></i>Micheal B.</a> <a
+                                            href="/"><i class="ti-comment"></i>5 Comments</a> </div>
+                                    <div class="text"> <a href="/">Penalties for violating the rules in rental cars</a>
+                                    </div> <a href="/" class="icon-btn"><i class="ti-arrow-top-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img"> <img src="/static/external/service5.jpg" alt=""> </div>
+                            <div class="wrapper">
+                                <div class="date"> <a href="/">21 Dec, 2025</a> </div>
+                                <div class="con">
+                                    <div class="category"> <a href="/"><i class="ti-user"></i>Daniel K.</a> <a
+                                            href="/"><i class="ti-comment"></i>5 Comments</a> </div>
+                                    <div class="text"> <a href="/">How to check a car before renting?</a> </div> <a
+                                        href="/" class="icon-btn"><i class="ti-arrow-top-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Lets Talk -->
+    <section id="app" data-scroll-index="7" class="app">
+        <div class="container">
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <h6>Download App</h6>
+                        <h3>We available on Store.</h3>
+                        <p class="mb-30">Enjoy quick bookings, secure online payments, and seamless document uploads—all
+                            from your phone. Whether you're riding a car, bike, or auto, our app gets you moving faster.
+                        </p>
+                        <a href="#0" class="button-3 mb-20 mr-10">Apple Store <span
+                                class="fa-brands fa-apple"></span></a>
+                        <a href="#0" class="button-3 mb-20">Google Play <span
+                                class="fa-brands fa-google-play"></span></a>
+                    </div>
+                    <div class="col-lg-4 offset-lg-1 col-md-12">
+                        <img src="/static/img/app.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer clearfix">
+        <div class="container">
+            <!-- first footer -->
+            <div class="first-footer">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="links dark footer-contact-links">
+                            <div class="footer-contact-links-wrapper">
+                                <div class="footer-contact-link-wrapper">
+                                    <div class="image-wrapper footer-contact-link-icon">
+                                        <div class="icon-footer"> <i class="flaticon-phone-call"></i> </div>
+                                    </div>
+                                    <div class="footer-contact-link-content">
+                                        <h6>Call us</h6>
+                                        <p>+91 9601406607</p>
+                                    </div>
+                                </div>
+                                <div class="footer-contact-links-divider"></div>
+                                <div class="footer-contact-link-wrapper">
+                                    <div class="image-wrapper footer-contact-link-icon">
+                                        <div class="icon-footer"> <i class="omfi-envelope"></i> </div>
+                                    </div>
+                                    <div class="footer-contact-link-content">
+                                        <h6>Email Us</h6>
+                                        <p>info.quickoo@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="footer-contact-links-divider"></div>
+                                <div class="footer-contact-link-wrapper">
+                                    <div class="image-wrapper footer-contact-link-icon">
+                                        <div class="icon-footer"> <i class="omfi-location"></i> </div>
+                                    </div>
+                                    <div class="footer-contact-link-content">
+                                        <h6>Address</h6>
+                                        <p>402, Shangrila Arcade, near Shyamal Cross Road,<br> Ahmedabad, Gujarat 380015
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- second footer -->
+            <div class="second-footer">
+                <div class="row">
+                    <!-- about & social icons -->
+                    <div class="col-md-4 widget-area">
+                        <div class="widget clearfix">
+                            <div class="footer-logo"><img src="/static/img/logo-light.png" alt=""></div>
+                            <!-- <div class="footer-logo"><h2>CARE<span>X</span></h2></div> -->
+                            <div class="widget-text">
+                                <p>Connecting people through smart, eco-friendly ride sharing. Whether you're heading
+                                    within the city or across states, we've got a ride for you—car, bike, or auto.</p>
+                                <div class="social-icons">
+                                    <ul class="list-inline">
+                                        <li><a href="https://www.instagram.com/quickoo.ride/"><i
+                                                    class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="/"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="/"><i class="fa-brands fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                                <p>Your ride, your way — just a tap away.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- quick links -->
+                    <div class="col-md-3 offset-md-1 widget-area">
+                        <div class="widget clearfix usful-links">
+                            <h3 class="widget-title">Quick Links</h3>
+                            <ul>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- subscribe -->
+                    <div class="col-md-4 widget-area">
+                        <div class="widget clearfix">
+                            <h3 class="widget-title">Subscribe</h3>
+                            <p>Stay in the loop with exclusive offers, ride updates, and exciting announcements.</p>
+                            <div class="widget-newsletter">
+                                <form action="/newletters" , method="post">
+                                    <input type="email" name="email" placeholder="Email Address" required>
+                                    <button type="submit"><i class="ti-arrow-top-right"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- bottom footer -->
+            <div class="bottom-footer-text">
+                <div class="row copyright">
+                    <div class="col-md-12">
+                        <p class="mb-0">&copy;2025 <a href="/">Quickoo Pvt. Ltd.</a>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Toast Container -->
+    <div aria-live="polite" aria-atomic="true" class="position-relative">
+        <div class="toast-container position-fixed top-0 end-0 p-3">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for msg in messages %}
+            <div class="toast align-items-center text-bg-success border-0 show" role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        {{ msg }}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.toast').forEach(toastEl => {
+            new bootstrap.Toast(toastEl).show();
+        });
+    </script>
+    <!-- jQuery -->
+    <script src="/static/js/jquery-3.7.1.min.js"></script>
+    <script src="/static/js/jquery-migrate-3.4.1.min.js"></script>
+    <script src="/static/js/modernizr-2.6.2.min.js"></script>
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/jquery.isotope.v3.0.2.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/scrollIt.min.js"></script>
+    <script src="/static/js/jquery.waypoints.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/jquery.stellar.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.js"></script>
+    <script src="/static/js/select2.js"></script>
+    <script src="/static/js/datepicker.js"></script>
+    <script src="/static/js/YouTubePopUp.js"></script>
+    <script src="/static/js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Address Search with Maps</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-Z1yfO79TH2uuDT9-fu-0YmHCRL_B9IA&libraries=places"></script>
+  <script>
+    let autocomplete;
+
+    function initAutocomplete() {
+      const input = document.getElementById('address');
+      autocomplete = new google.maps.places.Autocomplete(input);
+      autocomplete.setFields(['address_components', 'geometry', 'name']);
+      autocomplete.addListener('place_changed', onPlaceChanged);
+    }
+
+    function onPlaceChanged() {
+      const place = autocomplete.getPlace();
+      if (!place.geometry) {
+        alert("No details available for input: '" + place.name + "'");
+        return;
+      }
+
+      console.log("Place selected:", place);
+
+      // Example: extract location coordinates
+      const lat = place.geometry.location.lat();
+      const lng = place.geometry.location.lng();
+
+      document.getElementById('result').innerText = `Coordinates: ${lat}, ${lng}`;
+    }
+  </script>
+</head>
+<body onload="initAutocomplete()">
+  <h3>Search for an Address</h3>
+  <input id="address" type="text" placeholder="Enter address" style="width: 300px; padding: 5px;">
+  <div id="result" style="margin-top: 10px; font-weight: bold;"></div>
+</body>
+</html>
