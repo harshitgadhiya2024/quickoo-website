@@ -72,7 +72,7 @@ def newletters():
         return response_data
 
 
-@app.route("/bookanow", methods=["GET", "POST"])
+@app.route("/book-now", methods=["GET", "POST"])
 def bookanow():
     return render_template("booknow.html")
 
