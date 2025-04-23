@@ -11,6 +11,68 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;display=swap">
     <link rel="stylesheet" href="/static/css/plugins.css" />
     <link rel="stylesheet" href="/static/css/style.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ5RZHZZF8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HJ5RZHZZF8');
+    </script>
+    <script>
+  let pickupAutocomplete, dropAutocomplete;
+
+  // Global function required for Google Maps callback
+  window.initAutocomplete = function () {
+    const pickupInput = document.getElementById("pickuppoint");
+    const dropInput = document.getElementById("droppoint");
+
+    if (pickupInput) {
+      pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput);
+      pickupAutocomplete.setFields(["address_components", "geometry", "name"]);
+    }
+
+    if (dropInput) {
+      dropAutocomplete = new google.maps.places.Autocomplete(dropInput);
+      dropAutocomplete.setFields(["address_components", "geometry", "name"]);
+    }
+
+    // Add custom styling for autocomplete results
+    const style = document.createElement('style');
+    style.textContent = `
+      .pac-container {
+        background-color: #1b1b1b;
+        border-radius: 10px;
+        border: 1px solid #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+      .pac-item {
+        color: white;
+        padding: 8px 12px;
+        border-top: 1px solid #333;
+      }
+      .pac-item:hover {
+        background-color: #333;
+      }
+      .pac-item-query {
+        color: white;
+      }
+      .pac-matched {
+        color: #ffcc00;
+      }
+      .pac-icon {
+        filter: invert(1);
+      }
+    `;
+    document.head.appendChild(style);
+  };
+</script>
+<!-- ✅ Google Maps JS with callback set to initAutocomplete -->
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-Z1yfO79TH2uuDT9-fu-0YmHCRL_B9IA&libraries=places&callback=initAutocomplete"
+  async defer></script>
+
 </head>
 
 <body>
@@ -61,102 +123,48 @@
         </div>
     </nav>
     <!-- Header Banner -->
-    <section class="banner-header middle-height section-padding bg-img" data-overlay-dark="6"
-        data-background="/static/img/slider/4.jpg">
-        <div class="v-middle">
-            <div class="container">
+
+    <section data-scroll-index="1" class="background bg-img bg-fixed section-padding" data-overlay-dark="5" data-background="img/slider/2.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center mb-15">
+                <div class="section-subtitle">Rent Now</div>
+                <div class="section-title">Book Auto Rental</div>
+            </div>
+        </div>
+        <div class="booking-inner clearfix">
+            <form action="#0" class="form1 brdr clearfix">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h6>QUICKOO</h6>
-                        <h1>Privacy & <span>Us</span></h1>
+                    <div class="col-md-3" >
+                        <label for="pickuppoint" >Pickup Point</label>
+                        <input type="text" id="pickuppoint" name="pickuppoint" placeholder="Enter Pickup" style="color:#ffffff;">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="droppoint">Drop Point</label>
+                        <input type="text" id="droppoint" name="droppoint" placeholder="Enter Drop" style="color:#ffffff;">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="count">Person Count</label>
+                        <input type="number" id="count" name="count" min="1" placeholder="Adult Count" style="background-color: #222222;  color:#ffffff; height:60px;  text-align:center; border-radius: 30px; border: none !important;">
+                    </div>
+                    <div class="col-md-2">
+                        <div class="input1_wrapper">
+                            <label>Pick Up Date</label>
+                            <div class="input1_inner">
+                                <input type="text" class="form-control input datepicker" placeholder="Pick Up Date" required style="color:#ffffff;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="booking-button">Search</button>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
-    </section>
-    <div class="line-vr-section"></div>
-    <!-- About -->
-    <section class="about section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 mb-30">
-                    <div class="content">
-                        <h1>Privacy Policy</h1>
-                        <p>Effective Date: April 5, 2025</p>
-                        <p>Welcome to Quickoo. Your privacy is important to us. This Privacy Policy explains how we
-                            collect, use, share, and protect your personal data when you use our ride-sharing platform
-                            and services.</p>
+    </div>
+</section>
 
-                        <h2>1. Information We Collect</h2>
-                        <p>We collect various types of information to provide and improve our services:</p>
-                        <ul>
-                            <li><strong>Personal Information:</strong> Name, email, phone number, profile photo, payment
-                                details.</li>
-                            <li><strong>Ride Information:</strong> Travel routes, departure and destination locations,
-                                car details.</li>
-                            <li><strong>Usage Data:</strong> Device information, IP address, browser type, log data.
-                            </li>
-                            <li><strong>Location Data:</strong> Real-time location (with your permission) for route
-                                optimization and safety.</li>
-                        </ul>
 
-                        <h2>2. How We Use Your Information</h2>
-                        <p>We use your data to:</p>
-                        <ul>
-                            <li>Match drivers and riders efficiently.</li>
-                            <li>Enable communication between users.</li>
-                            <li>Improve user experience and enhance safety.</li>
-                            <li>Send important updates, ride confirmations, and support responses.</li>
-                            <li>Comply with legal obligations.</li>
-                        </ul>
-
-                        <h2>3. Sharing of Information</h2>
-                        <p>We may share your data with:</p>
-                        <ul>
-                            <li>Other users (e.g., drivers or riders matched with you).</li>
-                            <li>Service providers for payment processing, cloud hosting, etc.</li>
-                            <li>Law enforcement or regulators when required by law.</li>
-                        </ul>
-
-                        <h2>4. Data Security</h2>
-                        <p>We implement appropriate security measures such as encryption, secure servers, and access
-                            controls to protect your data. However, no system is completely secure, and we cannot
-                            guarantee absolute protection.</p>
-
-                        <h2>5. Your Rights and Choices</h2>
-                        <p>You have the right to:</p>
-                        <ul>
-                            <li>Access and update your personal data.</li>
-                            <li>Request deletion of your account and data.</li>
-                            <li>Opt-out of marketing communications.</li>
-                            <li>Withdraw consent for location access at any time via app settings.</li>
-                        </ul>
-
-                        <h2>6. Cookies and Tracking</h2>
-                        <p>We use cookies and similar technologies to enhance your experience. You can control cookie
-                            settings through your browser preferences.</p>
-
-                        <h2>7. Children’s Privacy</h2>
-                        <p>Quickoo is not intended for users under the age of 18. We do not knowingly collect data from
-                            minors.</p>
-
-                        <h2>8. Changes to This Policy</h2>
-                        <p>We may update this Privacy Policy from time to time. When we do, we will revise the
-                            "Effective Date" and notify you via email or app notification if the changes are
-                            significant.</p>
-
-                        <h2>9. Contact Us</h2>
-                        <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
-                        <p><strong>Email:</strong> support@quickoo.com<br>
-                            <strong>Phone:</strong> +1-800-QUICKOO<br>
-                            <strong>Address:</strong> Quickoo Inc., 123 Carpool Avenue, Mobility City, USA
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Footer -->
     <footer class="footer clearfix">
         <div class="container">
@@ -231,8 +239,6 @@
                             <ul>
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/contact">Contact</a></li>
-                                <li><a href="/privacy_policy">Privacy Policy</a></li>
-                                <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
                             </ul>
                         </div>
                     </div>
