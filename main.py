@@ -46,9 +46,15 @@ def contact():
             phone = request.form.get("phone")
             subject = request.form.get("subject")
             message = request.form.get("message")
+            try:
+                phone = int(phone)
+            except:
+                print("coming in here")
+                flash("Please enter valid phone number", "danger")
+                return redirect("/contact")
             mongoOperation().insert_data_from_coll(client, "quickoo", "contact_us", {"name": name, "email": email, "phone": phone, 
                                                                                      "subject": subject, "message": message, "inserted_on": datetime.utcnow()})
-            flash("Our administrative contact will you soon!")
+            flash("Our administrative contact will you soon!", "success")
             return redirect("/contact")
         else:
             return render_template("contact.html")
@@ -63,7 +69,7 @@ def newletters():
     try:
         email = request.form.get("email")
         mongoOperation().insert_data_from_coll(client, "quickoo", "newsletters", {"email": email})
-        flash("Newsletter submit successfully...")
+        flash("Newsletter submit successfully...", "success")
         return redirect("/")
     
     except Exception as e:
@@ -76,6 +82,14 @@ def newletters():
 def bookanow():
     return render_template("booknow.html")
 
+@app.route("/terms-condition", methods=["GET", "POST"])
+def terms_condition():
+    return render_template("terms-condition.html")
+
+@app.route("/privacy-policy", methods=["GET", "POST"])
+def privacy_policy():
+    return render_template("privacy_policy.html")
+
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=7070, debug=True)
+    app.run(host="0.0.0.0", port=7070)

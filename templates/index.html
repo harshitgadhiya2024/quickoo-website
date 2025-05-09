@@ -56,7 +56,6 @@
                     <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/book-now">Book a Now</a></li>
                 </ul>
                 <div class="navbar-right">
                     <div class="wrap">
@@ -67,6 +66,11 @@
                         </div>
                     </div>
                 </div>
+                <button
+                    style="background-color: #9acf4a; border:none; border-radius: 50px; padding:8px 20px 8px 20px; margin-left:20px;">
+                    <li class="nav-item"><a class="nav-link" target="_blank" href="/book-now" style="color:#000000">Book
+                            a Now</a></li>
+                </button>
             </div>
         </div>
     </nav>
@@ -85,7 +89,7 @@
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <h6 style="font-weight: 800;">* Premium Shuttles</h6>
-                            <h1>Make your dream live</h1>
+                            <h1 style="margin-top:none;">Make your dream live</h1>
                         </div>
                     </div>
                 </div>
@@ -129,14 +133,152 @@
             </div>
         </div>
     </section>
+    <div class="main-container">
+        <div class="row">
+            <div class="col-md-12 text-center mb-30">
+                <div class="section-subtitle">QUICKOO</div>
+                <div class="section-title">Plan Ahead, <span>Ride Smart</span></div>
+            </div>
+        </div>
+        <div class="line-vr-section"></div>
+        <!-- Booking Section -->
+        <div class="row">
+            <!-- Benefits Section -->
+            <div class="col-lg-4">
+                <div class="card-body p-4" style="background-color:white; border-radius: 15px; min-height: 395px;">
+                    <h3 class="fw-bold mb-4">✨ Why Reserve with Quickoo?</h3>
+                    <!-- Benefit Item 1 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <img src="static\external\calendar-filled.svg" alt="Calendar icon" class="img-fluid">
+                        </div>
+                        <div class="benefit-text">
+                            <p class="mb-0" style="color:black;">Pick your perfect time — Schedule your ride up to 90
+                                days in advance.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Benefit Item 2 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <img src="static\external\anytime.svg" alt="Clock icon" class="img-fluid">
+                            <!-- Replace with your actual path: static/img/suggestion/anytime.svg -->
+                        </div>
+                        <div class="benefit-text">
+                            <p class="mb-0" style="color:black;">We wait for you — Includes built-in buffer time, so
+                                you're never rushed.</p>
+                        </div>
+                    </div>
+                    <!-- Benefit Item 3 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <img src="static\external\credit_card-filled.svg" alt="Credit card icon" class="img-fluid">
+                            <!-- Replace with your actual path: static/img/suggestion/credit_card-filled.svg -->
+                        </div>
+                        <div class="benefit-text">
+                            <p class="mb-0" style="color:black;">Cancel freely — Change your plans with no penalty up to
+                                60 minutes before pickup.</p>
+                        </div>
+                    </div>
+                    <!-- <a href="#" class="text-decoration-none text-dark fw-bold"><u>See terms</u></a> -->
+                </div>
+            </div>
+            <div class="col-lg-8 mb-4">
+                <div class="hero-section">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="plan-title">Lock in your ride with Quickoo Reserve</h2>
+
+                            <div class="mt-4 mb-4">
+                                <p class="mb-3" style="color:black;">Choose date and time</p>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="date-time-selector">
+                                            <div class="input-group">
+                                                <input type="date" id="tripDate" class="form-control" min="Date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="date-time-selector">
+                                            <div class="input-group">
+                                                <select id="tripTime" class="form-select">
+                                                    <option value="" selected disabled>Select time</option>
+                                                    <option value="00:00">12:00 AM</option>
+                                                    <option value="00:30">12:30 AM</option>
+                                                    <option value="01:00">1:00 AM</option>
+                                                    <option value="01:30">1:30 AM</option>
+                                                    <option value="02:00">2:00 AM</option>
+                                                    <option value="02:30">2:30 AM</option>
+                                                    <option value="03:00">3:00 AM</option>
+                                                    <option value="03:30">3:30 AM</option>
+                                                    <option value="04:00">4:00 AM</option>
+                                                    <option value="04:30">4:30 AM</option>
+                                                    <option value="05:00">5:00 AM</option>
+                                                    <option value="05:30">5:30 AM</option>
+                                                    <option value="06:00">6:00 AM</option>
+                                                    <option value="06:30">6:30 AM</option>
+                                                    <option value="07:00">7:00 AM</option>
+                                                    <option value="07:30">7:30 AM</option>
+                                                    <option value="08:00">8:00 AM</option>
+                                                    <option value="08:30">8:30 AM</option>
+                                                    <option value="09:00">9:00 AM</option>
+                                                    <option value="09:30">9:30 AM</option>
+                                                    <option value="10:00">10:00 AM</option>
+                                                    <option value="10:30">10:30 AM</option>
+                                                    <option value="11:00">11:00 AM</option>
+                                                    <option value="11:30">11:30 AM</option>
+                                                    <option value="12:00">12:00 PM</option>
+                                                    <option value="12:30">12:30 PM</option>
+                                                    <option value="13:00">1:00 PM</option>
+                                                    <option value="13:30">1:30 PM</option>
+                                                    <option value="14:00">2:00 PM</option>
+                                                    <option value="14:30">2:30 PM</option>
+                                                    <option value="15:00">3:00 PM</option>
+                                                    <option value="15:30">3:30 PM</option>
+                                                    <option value="16:00">4:00 PM</option>
+                                                    <option value="16:30">4:30 PM</option>
+                                                    <option value="17:00">5:00 PM</option>
+                                                    <option value="17:30">5:30 PM</option>
+                                                    <option value="18:00">6:00 PM</option>
+                                                    <option value="18:30">6:30 PM</option>
+                                                    <option value="19:00">7:00 PM</option>
+                                                    <option value="19:30">7:30 PM</option>
+                                                    <option value="20:00">8:00 PM</option>
+                                                    <option value="20:30">8:30 PM</option>
+                                                    <option value="21:00">9:00 PM</option>
+                                                    <option value="21:30">9:30 PM</option>
+                                                    <option value="22:00">10:00 PM</option>
+                                                    <option value="22:30">10:30 PM</option>
+                                                    <option value="23:00">11:00 PM</option>
+                                                    <option value="23:30">11:30 PM</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/book-now" class="btn btn-next mt-3" id="nextBtn">Next</a>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center justify-content-center">
+                            <div class="watch-image">
+                                <img src="static\external\4.jpg" alt="Calendar with watch" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- About -->
-    <section class="about section-padding">
+    <section class="about section-padding" style="padding-bottom:0px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 mb-30">
                     <div class="content">
                         <div class="section-subtitle">QUICKOO</div>
-                        <div class="section-title">We Are More Than <span>Just a Carpooling Service</span></div>
+                        <div class="section-title">Making Travel Smarter, Greener <span>and Cheaper</span></div>
                         <p class="mb-30">We're building a smarter, greener, and more social way to travel. Whether
                             you're commuting to work, heading out for a weekend trip, or just looking to split costs—our
                             platform connects drivers and riders going the same way. <br>Enjoy affordable, comfortable
@@ -154,16 +296,17 @@
                                     <p>Flexible Routes & Schedules</p>
                                 </div>
                             </li>
-                        </ul> <a href="/about" class="button-1">Read More <span class="ti-arrow-top-right"></span></a>
+                        </ul> <a href="/about" class="button-1">About Us<span class="ti-arrow-top-right"></span></a>
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1 col-md-12">
-                    <div class="item"> <img src="/static/img/about.jpg" class="img-fluid" alt="">
+                    <div class="item"> <img src="/static/external/about_us.png" class="img-fluid" alt="">
                         <div class="curv-butn icon-bg">
-                            <a href="http://127.0.0.1:5000/static/external/Ride Booking Animation Concept_free.mp4"
-                                class="vid">
-                                <div class="icon"> <i class="ti-control-play"></i> </div>
-                            </a>
+                            <!-- <a href="http://127.0.0.1:5000/static/external/Ride Booking Animation Concept_free.mp4"
+                                class="vid"> -->
+                            <div class="icon" style="margin-top: 15px !important; margin-left: 15px !important;"> <i
+                                    class="ti-control-play"></i> </div>
+                            <!-- </a> -->
                             <div class="br-left-top">
                                 <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
                                     class="w-11 h-11">
@@ -186,12 +329,6 @@
             </div>
         </div>
     </section>
-    <!-- divider line -->
- <div class="line-vr-section"></div>
-    <!-- Car Category -->
-
-
-
     <section class="car-types4 section-padding">
         <div class="container">
             <div class="row">
@@ -200,6 +337,8 @@
                     <div class="section-title">Our <span>Services</span></div>
                 </div>
             </div>
+            <div class="line-vr-section"></div>
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
@@ -349,10 +488,117 @@
             </div>
         </div>
     </section>
-    <!-- divider line -->
-    <div class="line-vr-section"></div>
+    <div class="main-container">
+        <div class="row">
+            <div class="col-md-12 text-center mb-30">
+                <div class="section-subtitle">QUICKOO</div>
+                <div class="section-title">Smart Steps to <span>Travel Better</span></div>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Ride Card -->
+            <div class="col">
+                <div class="service-card">
+                    <h2 class="service-title">Ride</h2>
+                    <p class="service-description">Travel anywhere with Quickoo. Book a vehicle for outercity or
+                        intercity rides and share the journey.</p>
+                    <!--                    <button class="btn btn-details">Details</button>-->
+                    <img src="static\external\1.png" alt="Car illustration" class="service-image">
+                </div>
+            </div>
+
+            <!-- Reserve Card -->
+            <div class="col">
+                <div class="service-card">
+                    <h2 class="service-title">Reserve</h2>
+                    <p class="service-description">Plan ahead with Quickoo. Reserve your ride in advance for a
+                        hassle-free trip.</p>
+                    <!--                    <button class="btn btn-details">Details</button>-->
+                    <img src="static\external\2.png" alt="Calendar and clock" class="service-image">
+                </div>
+            </div>
+
+            <!-- Courier Card -->
+            <div class="col">
+                <div class="service-card">
+                    <h2 class="service-title">Enjoy trip</h2>
+                    <p class="service-description">Save more with Quickoo. Join others for intercity rides and split the
+                        cost.</p>
+                    <!--                    <button class="btn btn-details">Details</button>-->
+                    <img src="static\external\3.png" alt="Delivery person" class="service-image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="containers" style="margin-top: 40px;">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-subtitle">QUICKOO</div>
+                <div class="section-title">Drive, Earn, and Grow <span>with Quickoo</span></div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-md-6 heros-img mt-4 mt-md-0">
+                <img src="/static/external/b1.png" alt="Quickoo Business Illustration">
+                <!-- Replace 'your-image.jpg' with the actual image path -->
+            </div>
+            <!-- Text Content -->
+            <div class="col-md-6 heros-text">
+                <h1 style="margin-bottom: 20px !important;">Drive when you want, make what you need</h1>
+                <p>Be your own boss. Earn with Quickoo by choosing when and how you work—deliveries, rides, or both. You
+                    can drive your own car or rent one through us.</p>
+                <div class="mt-4">
+                    <a href="/book-now" class="btn btn-dark me-3">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="containers ">
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-md-6 heros-text">
+                <h1 style="margin-bottom: 20px !important;">The Quickoo you know, reimagined for business</h1>
+                <p>Quickoo for Business is a platform for managing global rides and meals, and local deliveries, for
+                    companies of any size.</p>
+                <div class="mt-4">
+                    <a href="/book-now" class="btn btn-dark me-3">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-md-6 heros-img mt-4 mt-md-0">
+                <img src="/static/external/b2.png" alt="Quickoo Business Illustration">
+                <!-- Replace 'your-image.jpg' with the actual image path -->
+            </div>
+        </div>
+    </div>
+    <div class="containers ">
+        <div class="row align-items-center">
+            <div class="col-md-6 heros-img mt-4 mt-md-0">
+                <img src="/static/external/b3.png" alt="Quickoo Business Illustration">
+            </div>
+            <div class="col-md-6 heros-text">
+                <h1 style="margin-bottom: 20px !important;">Make money by renting out<br> your car</h1>
+                <p>Connect with thousands of drivers and earn more per week with Quickoo’s free fleet management tools.
+                </p>
+                <div class="mt-4">
+                    <a href="/book-now" class="btn btn-dark me-3">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- Testimonials -->
-    <section class="testimonials section-padding mt-15">
+    <!-- <section class="testimonials section-padding mt-15" style="padding-top:0px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center mb-30">
@@ -530,11 +776,10 @@
                 </div>
             </div>
         </div>
-    </section>
-    <!-- divider line -->
-    <div class="line-vr-section"></div>
+    </section> -->
+
     <!-- Blog 1 -->
-    <section class="blog1 section-padding">
+    <!-- <section class="blog1 section-padding" style="padding-top:0px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center mb-30">
@@ -621,8 +866,45 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Lets Talk -->
+
+    <div class="main-container">
+        <div class="row">
+            <div class="col-md-12 text-center mb-30">
+                <div class="section-subtitle">QUICKOO</div>
+                <div class="section-title">Download. Ride. <span>Repeat.</span></div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Ride Card -->
+            <div class="col">
+                <div class="card" style="width: 100% !important;">
+                    <img src="static\external\9.png" alt="Uber QR">
+                    <div class="card-content">
+                        <h3 class="text-center" style="color: grey !important;">Android Device</h3>
+                        <h3 class="text-center">Download the Quickoo app</h3>
+                    </div>
+                    <!--        <div class="arrow">&#8594;</div>-->
+                </div>
+            </div>
+
+            <!-- Reserve Card -->
+            <div class="col">
+                <div class="card" style="width: 100% !important;">
+                    <img src="static\external\9.png" alt="Uber QR">
+                    <div class="card-content">
+                        <h3 class="text-center" style="color: grey !important;">IOS Device</h3>
+                        <h3 class="text-center">Download the Quickoo app</h3>
+                    </div>
+                    <!--        <div class="arrow">&#8594;</div>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <section id="app" data-scroll-index="7" class="app">
         <div class="container">
             <div class="item">
@@ -645,6 +927,7 @@
             </div>
         </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer clearfix">
         <div class="container">
@@ -660,13 +943,13 @@
                                     </div>
                                     <div class="footer-contact-link-content">
                                         <h6>Call us</h6>
-                                        <p>+91 9601406607</p>
+                                        <p>+919601406607</p>
                                     </div>
                                 </div>
                                 <div class="footer-contact-links-divider"></div>
                                 <div class="footer-contact-link-wrapper">
                                     <div class="image-wrapper footer-contact-link-icon">
-                                        <div class="icon-footer"> <i class="omfi-envelope"></i> </div>
+                                        <div class="icon-footer"> <i class="far fa-envelope"></i> </div>
                                     </div>
                                     <div class="footer-contact-link-content">
                                         <h6>Email Us</h6>
@@ -676,14 +959,26 @@
                                 <div class="footer-contact-links-divider"></div>
                                 <div class="footer-contact-link-wrapper">
                                     <div class="image-wrapper footer-contact-link-icon">
-                                        <div class="icon-footer"> <i class="omfi-location"></i> </div>
+                                        <div class="icon-footer"> <i class="far fa-building	"></i> </div>
                                     </div>
                                     <div class="footer-contact-link-content">
-                                        <h6>Address</h6>
-                                        <p>402, Shangrila Arcade, near Shyamal Cross Road,<br> Ahmedabad, Gujarat 380015
-                                        </p>
+                                        <h6>Head Office</h6>
+                                        <p>73 HOLBURN STREET, ABERDEEN, AB10 6DN, UNITED KINGDOM</p>
+                                    </div>
+
+                                </div>
+                                <div class="footer-contact-links-divider"></div>
+                                <div class="footer-contact-link-wrapper">
+                                    <div class="image-wrapper footer-contact-link-icon">
+                                        <div class="icon-footer"> <i class="omfi-location"></i> </div>
+                                    </div>
+
+                                    <div class="footer-contact-link-content">
+                                        <h6>Branch - Ahmedabad</h6>
+                                        <p>402, SHANGRILA ARCADE, NEAR SHYAMAL CROSS ROAD, AHEMDABAD, INDIA</p>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -719,6 +1014,8 @@
                             <ul>
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/contact">Contact</a></li>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/terms-condition">Terms & Conditions</a></li>
                             </ul>
                         </div>
                     </div>
@@ -741,19 +1038,20 @@
             <div class="bottom-footer-text">
                 <div class="row copyright">
                     <div class="col-md-12">
-                        <p class="mb-0">&copy;2025 <a href="/">Quickoo Pvt. Ltd.</a>. All rights reserved.</p>
+                        <p class="mb-0">&copy;2025 <a href="/">Quickoo Tech Transport Pvt. Ltd.</a>. All rights reserved.</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
     <!-- Toast Container -->
     <div aria-live="polite" aria-atomic="true" class="position-relative">
         <div class="toast-container position-fixed top-0 end-0 p-3">
-            {% with messages = get_flashed_messages() %}
+            {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
-            {% for msg in messages %}
-            <div class="toast align-items-center text-bg-success border-0 show" role="alert" aria-live="assertive"
+            {% for category, msg in messages %}
+            <div class="toast align-items-center text-bg-{{category}} border-0 show" role="alert" aria-live="assertive"
                 aria-atomic="true">
                 <div class="d-flex">
                     <div class="toast-body">

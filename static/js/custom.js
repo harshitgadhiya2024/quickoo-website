@@ -89,6 +89,10 @@ $(function () {
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
         }
     });
+
+    document.querySelectorAll('.toast').forEach(toastEl => {
+        new bootstrap.Toast(toastEl).show();
+    });
     
     // Slider  
     $(document).ready(function () {

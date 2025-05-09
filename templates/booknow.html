@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Contact - QUICKOO</title>
+    <title>Book a Now - QUICKOO</title>
     <link rel="shortcut icon" href="/static/external/favicon.png" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;display=swap">
@@ -17,30 +17,29 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-HJ5RZHZZF8');
     </script>
     <script>
-  let pickupAutocomplete, dropAutocomplete;
+        let pickupAutocomplete, dropAutocomplete;
 
-  // Global function required for Google Maps callback
-  window.initAutocomplete = function () {
-    const pickupInput = document.getElementById("pickuppoint");
-    const dropInput = document.getElementById("droppoint");
+        // Global function required for Google Maps callback
+        window.initAutocomplete = function () {
+            const pickupInput = document.getElementById("pickuppoint");
+            const dropInput = document.getElementById("droppoint");
 
-    if (pickupInput) {
-      pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput);
-      pickupAutocomplete.setFields(["address_components", "geometry", "name"]);
-    }
+            if (pickupInput) {
+                pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput);
+                pickupAutocomplete.setFields(["address_components", "geometry", "name"]);
+            }
 
-    if (dropInput) {
-      dropAutocomplete = new google.maps.places.Autocomplete(dropInput);
-      dropAutocomplete.setFields(["address_components", "geometry", "name"]);
-    }
+            if (dropInput) {
+                dropAutocomplete = new google.maps.places.Autocomplete(dropInput);
+                dropAutocomplete.setFields(["address_components", "geometry", "name"]);
+            }
 
-    // Add custom styling for autocomplete results
-    const style = document.createElement('style');
-    style.textContent = `
+            // Add custom styling for autocomplete results
+            const style = document.createElement('style');
+            style.textContent = `
       .pac-container {
         background-color: #1b1b1b;
         border-radius: 10px;
@@ -66,13 +65,13 @@
         filter: invert(1);
       }
     `;
-    document.head.appendChild(style);
-  };
-</script>
-<!-- ✅ Google Maps JS with callback set to initAutocomplete -->
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-Z1yfO79TH2uuDT9-fu-0YmHCRL_B9IA&libraries=places&callback=initAutocomplete"
-  async defer></script>
+            document.head.appendChild(style);
+        };
+    </script>
+    <!-- ✅ Google Maps JS with callback set to initAutocomplete -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-Z1yfO79TH2uuDT9-fu-0YmHCRL_B9IA&libraries=places&callback=initAutocomplete"
+        async defer></script>
 
 </head>
 
@@ -108,8 +107,6 @@
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
                     <li class="nav-item"><a class="nav-link " href="/contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/book-now">Book a Now</a></li>
-
                 </ul>
                 <div class="navbar-right">
                     <div class="wrap">
@@ -120,6 +117,11 @@
                         </div>
                     </div>
                 </div>
+                <button
+                    style="background-color: #9acf4a; border:none; border-radius: 50px; padding:8px 20px 8px 20px; margin-left:20px;">
+                    <li class="nav-item"><a class="nav-link" target="_blank" href="/book-now" style="color:#000000">Book
+                            a Now</a></li>
+                </button>
             </div>
         </div>
     </nav>
@@ -129,7 +131,7 @@
         <div class="v-middle">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 text-center">
                         <h6>QUICKOO</h6>
                         <h1>Book <span>Ride</span></h1>
                     </div>
@@ -139,49 +141,174 @@
     </section>
     <!-- divider line -->
     <div class="line-vr-section"></div>
-    <section data-scroll-index="1" class="background bg-img bg-fixed section-padding" data-overlay-dark="5" data-background="img/slider/2.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center mb-15">
-                <div class="section-subtitle">QUICKOO</div>
-                <div class="section-title">Make a Ride</div>
+    <section data-scroll-index="1" class="background bg-img bg-fixed section-padding" data-overlay-dark="5"
+        data-background="img/slider/2.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-15">
+                    <div class="section-subtitle">QUICKOO</div>
+                    <div class="section-title">Make a Ride</div>
+                </div>
             </div>
-        </div>
-        <div class="booking-inner clearfix">
-            <form action="#0" class="form1 brdr clearfix">
-                <div class="row">
-                    <div class="col-md-2" >
-                        <label for="pickuppoint" >Pickup Point</label>
-                        <input type="text" id="textdata" name="textdata" value="Choose" placeholder="Make Ride" style="color:#ffffff;" readonly>
-                    </div>
-                    <div class="col-md-2" >
-                        <label for="pickuppoint" >Pickup Point</label>
-                        <input type="text" id="pickuppoint" name="pickuppoint" placeholder="Enter Pickup" style="color:#ffffff;">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="droppoint">Drop Point</label>
-                        <input type="text" id="droppoint" name="droppoint" placeholder="Enter Drop" style="color:#ffffff;">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="count">Person Count</label>
-                        <input type="number" id="count" name="count" min="1" placeholder="Adult Count" style="background-color: #222222;  color:#ffffff; height:60px;  border-radius: 30px; border: none !important;">
-                    </div>
-                    <div class="col-md-2">
-                        <div class="input1_wrapper">
-                            <label>Pick Up Date</label>
-                            <div class="input1_inner">
-                                <input type="text" class="form-control input datepicker" placeholder="Pick Up Date" required style="color:#ffffff;">
+            <div class="booking-inner clearfix">
+                <form action="#0" class="form1 brdr clearfix">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="pickuppoint">Pickup Point</label>
+                            <input type="text" id="textdata" name="textdata" value="Choose" placeholder="Make Ride"
+                                style="color:#ffffff;" readonly>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="pickuppoint">Pickup Point</label>
+                            <input type="text" id="pickuppoint" name="pickuppoint" placeholder="Enter Pickup"
+                                style="color:#ffffff;">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="droppoint">Drop Point</label>
+                            <input type="text" id="droppoint" name="droppoint" placeholder="Enter Drop"
+                                style="color:#ffffff;">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="count">Person Count</label>
+                            <input type="number" id="count" name="count" min="1" placeholder="Adult Count"
+                                style="background-color: #222222;  color:#ffffff; height:60px;  border-radius: 30px; border: none !important;">
+                        </div>
+                        <div class="col-md-2">
+                            <div class="input1_wrapper">
+                                <label>Pick Up Date</label>
+                                <div class="input1_inner">
+                                    <input type="text" class="form-control input datepicker" placeholder="Pick Up Date"
+                                        required style="color:#ffffff;">
+                                </div>
                             </div>
                         </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="booking-button">Get Price</button>
+                        </div>
                     </div>
-                    <div class="col-md-2">
-                        <button type="submit" class="booking-button">Search</button>
-                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="containers" style="margin-top: 40px;">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-subtitle">QUICKOO</div>
+                <div class="section-title">Drive, Earn, and Grow <span>with Quickoo</span></div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-md-6 heros-img mt-4 mt-md-0">
+                <img src="/static/external/b1.png" alt="Quickoo Business Illustration">
+                <!-- Replace 'your-image.jpg' with the actual image path -->
+            </div>
+            <!-- Text Content -->
+            <div class="col-md-6 heros-text">
+                <h1 style="margin-bottom: 20px !important;">Drive when you want, make what you need</h1>
+                <p>Be your own boss. Earn with Quickoo by choosing when and how you work—deliveries, rides, or both. You
+                    can drive your own car or rent one through us.</p>
+                <div class="mt-4">
+                    <a href="/book-now" class="btn btn-dark me-3">Book Now</a>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
+    <div class="containers ">
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-md-6 heros-text">
+                <h1 style="margin-bottom: 20px !important;">The Quickoo you know, reimagined for business</h1>
+                <p>Quickoo for Business is a platform for managing global rides and meals, and local deliveries, for
+                    companies of any size.</p>
+                <div class="mt-4">
+                    <a href="/book-now" class="btn btn-dark me-3">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-md-6 heros-img mt-4 mt-md-0">
+                <img src="/static/external/b2.png" alt="Quickoo Business Illustration">
+                <!-- Replace 'your-image.jpg' with the actual image path -->
+            </div>
+        </div>
+    </div>
+    <div class="containers ">
+        <div class="row align-items-center">
+            <div class="col-md-6 heros-img mt-4 mt-md-0">
+                <img src="/static/external/b3.png" alt="Quickoo Business Illustration">
+            </div>
+            <div class="col-md-6 heros-text">
+                <h1 style="margin-bottom: 20px !important;">Make money by renting out<br> your car</h1>
+                <p>Connect with thousands of drivers and earn more per week with Quickoo’s free fleet management tools.
+                </p>
+                <div class="mt-4">
+                    <a href="/book-now" class="btn btn-dark me-3">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="row">
+            <div class="col-md-12 text-center mb-30">
+                <div class="section-subtitle">QUICKOO</div>
+                <div class="section-title">Download. Ride. <span>Repeat.</span></div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Ride Card -->
+            <div class="col">
+                <div class="card" style="width: 100% !important;">
+                    <img src="static\external\9.png" alt="Uber QR">
+                    <div class="card-content">
+                        <h3 class="text-center" style="color: grey !important;">Android Device</h3>
+                        <h3 class="text-center">Download the Quickoo app</h3>
+                    </div>
+                    <!--        <div class="arrow">&#8594;</div>-->
+                </div>
+            </div>
+
+            <!-- Reserve Card -->
+            <div class="col">
+                <div class="card" style="width: 100% !important;">
+                    <img src="static\external\9.png" alt="Uber QR">
+                    <div class="card-content">
+                        <h3 class="text-center" style="color: grey !important;">IOS Device</h3>
+                        <h3 class="text-center">Download the Quickoo app</h3>
+                    </div>
+                    <!--        <div class="arrow">&#8594;</div>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section id="app" data-scroll-index="7" class="app">
+        <div class="container">
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <h6>Download App</h6>
+                        <h3>We available on Store.</h3>
+                        <p class="mb-30">Enjoy quick bookings, secure online payments, and seamless document uploads—all
+                            from your phone. Whether you're riding a car, bike, or auto, our app gets you moving faster.
+                        </p>
+                        <a href="#0" class="button-3 mb-20 mr-10">Apple Store <span
+                                class="fa-brands fa-apple"></span></a>
+                        <a href="#0" class="button-3 mb-20">Google Play <span
+                                class="fa-brands fa-google-play"></span></a>
+                    </div>
+                    <div class="col-lg-4 offset-lg-1 col-md-12">
+                        <img src="/static/img/app.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer clearfix">
         <div class="container">
@@ -197,13 +324,13 @@
                                     </div>
                                     <div class="footer-contact-link-content">
                                         <h6>Call us</h6>
-                                        <p>+91 9601406607</p>
+                                        <p>+919601406607</p>
                                     </div>
                                 </div>
                                 <div class="footer-contact-links-divider"></div>
                                 <div class="footer-contact-link-wrapper">
                                     <div class="image-wrapper footer-contact-link-icon">
-                                        <div class="icon-footer"> <i class="omfi-envelope"></i> </div>
+                                        <div class="icon-footer"> <i class="far fa-envelope"></i> </div>
                                     </div>
                                     <div class="footer-contact-link-content">
                                         <h6>Email Us</h6>
@@ -213,14 +340,26 @@
                                 <div class="footer-contact-links-divider"></div>
                                 <div class="footer-contact-link-wrapper">
                                     <div class="image-wrapper footer-contact-link-icon">
-                                        <div class="icon-footer"> <i class="omfi-location"></i> </div>
+                                        <div class="icon-footer"> <i class="far fa-building	"></i> </div>
                                     </div>
                                     <div class="footer-contact-link-content">
-                                        <h6>Address</h6>
-                                        <p>402, Shangrila Arcade, near Shyamal Cross Road,<br> Ahmedabad, Gujarat 380015
-                                        </p>
+                                        <h6>Head Office</h6>
+                                        <p>73 HOLBURN STREET, ABERDEEN, AB10 6DN, UNITED KINGDOM</p>
+                                    </div>
+
+                                </div>
+                                <div class="footer-contact-links-divider"></div>
+                                <div class="footer-contact-link-wrapper">
+                                    <div class="image-wrapper footer-contact-link-icon">
+                                        <div class="icon-footer"> <i class="omfi-location"></i> </div>
+                                    </div>
+
+                                    <div class="footer-contact-link-content">
+                                        <h6>Branch - Ahmedabad</h6>
+                                        <p>402, SHANGRILA ARCADE, NEAR SHYAMAL CROSS ROAD, AHEMDABAD, INDIA</p>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -256,6 +395,8 @@
                             <ul>
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/contact">Contact</a></li>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/terms-condition">Terms & Conditions</a></li>
                             </ul>
                         </div>
                     </div>
@@ -278,7 +419,7 @@
             <div class="bottom-footer-text">
                 <div class="row copyright">
                     <div class="col-md-12">
-                        <p class="mb-0">&copy;2025 <a href="/">Quickoo Pvt. Ltd.</a>. All rights reserved.</p>
+                        <p class="mb-0">&copy;2025 <a href="/">Quickoo Tech Transport Pvt. Ltd.</a>. All rights reserved.</p>
                     </div>
                 </div>
             </div>
@@ -288,10 +429,10 @@
     <!-- Toast Container -->
     <div aria-live="polite" aria-atomic="true" class="position-relative">
         <div class="toast-container position-fixed top-0 end-0 p-3">
-            {% with messages = get_flashed_messages() %}
+            {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
-            {% for msg in messages %}
-            <div class="toast align-items-center text-bg-success border-0 show" role="alert" aria-live="assertive"
+            {% for category, msg in messages %}
+            <div class="toast align-items-center text-bg-{{category}} border-0 show" role="alert" aria-live="assertive"
                 aria-atomic="true">
                 <div class="d-flex">
                     <div class="toast-body">
@@ -309,6 +450,50 @@
     <script>
         document.querySelectorAll('.toast').forEach(toastEl => {
             new bootstrap.Toast(toastEl).show();
+        });
+    </script>
+
+    <script>
+        // Set minimum date to today
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set minimum date to today
+            const today = new Date();
+            const formattedDate = today.toISOString().split('T')[0];
+            document.getElementById('tripDate').min = formattedDate;
+            document.getElementById('tripDate').value = formattedDate;
+            // Set default time (current hour rounded up to nearest 30 min)
+            const hours = today.getHours();
+            const minutes = today.getMinutes();
+            let timeValue;
+            if (minutes < 30) {
+                timeValue = `${hours.toString().padStart(2, '0')}:30`;
+            } else {
+                const nextHour = (hours + 1) % 24;
+                timeValue = `${nextHour.toString().padStart(2, '0')}:00`;
+            }
+            // Find and select the closest available time option
+            const timeSelect = document.getElementById('tripTime');
+            for (let i = 0; i < timeSelect.options.length; i++) {
+                if (timeSelect.options[i].value >= timeValue) {
+                    timeSelect.selectedIndex = i;
+                    break;
+                }
+            }
+            // Add validation and handling for the next button
+            document.getElementById('nextBtn').addEventListener('click', function () {
+                const selectedDate = document.getElementById('tripDate').value;
+                const selectedTime = document.getElementById('tripTime').value;
+
+                if (!selectedDate || !selectedTime) {
+                    alert('Please select both date and time for your ride');
+                    return;
+                }
+
+                // Here you would typically handle the form submission or next steps
+                console.log('Selected date:', selectedDate);
+                console.log('Selected time:', selectedTime);
+                alert('Ride scheduled for ' + selectedDate + ' at ' + document.getElementById('tripTime').options[document.getElementById('tripTime').selectedIndex].text);
+            });
         });
     </script>
     <!-- jQuery -->

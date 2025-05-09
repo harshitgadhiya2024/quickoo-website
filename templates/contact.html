@@ -41,8 +41,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo-wrapper">
-                <a class="logo" href="/"> <img src="/static//static/img/logo-light.png" class="logo-img" alt=""> </a>
-                <!-- <a class="logo" href="index.html"><h2>Renta<span>x</span></h2></a> -->
+                <a class="logo" href="/"> <img src="/static/img/logo-light.png" class="logo-img" alt=""> </a>
             </div>
             <!-- Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
@@ -54,8 +53,6 @@
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
                     <li class="nav-item"><a class="nav-link active" href="/contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/book-now">Book a Now</a></li>
-
                 </ul>
                 <div class="navbar-right">
                     <div class="wrap">
@@ -66,6 +63,11 @@
                         </div>
                     </div>
                 </div>
+                <button
+                    style="background-color: #9acf4a; border:none; border-radius: 50px; padding:8px 20px 8px 20px; margin-left:20px;">
+                    <li class="nav-item"><a class="nav-link" target="_blank" href="/book-now" style="color:#000000">Book
+                            a Now</a></li>
+                </button>
             </div>
         </div>
     </nav>
@@ -87,20 +89,28 @@
     <div class="contact-box">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 animate-box" data-animate-effect="fadeInUp">
-                    <div class="item"> <span class="icon omfi-envelope"></span>
+                <div class="col-lg-3 col-md-6 animate-box" data-animate-effect="fadeInUp">
+                    <div class="item" style="min-height: 280px;"> <span class="icon omfi-envelope"></span>
                         <h5>Email us</h5>
                         <p>info.quickoo@gmail.com</p> <i class="numb omfi-envelope"></i>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 animate-box" data-animate-effect="fadeInUp">
-                    <div class="item"> <span class="icon omfi-location"></span>
-                        <h5>Our address</h5>
-                        <p>402, Shangrila Arcade, Ahmedabad, Gujarat</p> <i class="numb omfi-location"></i>
+                <div class="col-lg-3 col-md-6 animate-box" data-animate-effect="fadeInUp">
+                    <div class="item"> <span class="icon far fa-building"></span>
+                        <h5>Head Office</h5>
+                        <p>450 BATH ROAD, LONGFORD, HEATHROW, LONDON, GREATER LONDON, UB7 0EB, UK</p>
+                        <i class="numb far fa-building"></i>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 animate-box" data-animate-effect="fadeInUp">
-                    <div class="item active"> <span class="icon omfi-phone"></span>
+                <div class="col-lg-3 col-md-6 animate-box" data-animate-effect="fadeInUp">
+                    <div class="item"> <span class="omfi-location"></span>
+                        <h5>Branch - Ahmedabad</h5>
+                        <p>402, SHANGRILA ARCADE, NEAR SHYAMAL CROSS ROAD, AHEMDABAD, INDIA</p> <i
+                            class="numb omfi-location"></i>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-box" data-animate-effect="fadeInUp">
+                    <div class="item active" style="min-height: 280px;"> <span class="icon omfi-phone"></span>
                         <h5>Call us</h5>
                         <p>+91 9601406607</p> <i class="numb omfi-phone"></i>
                     </div>
@@ -116,7 +126,7 @@
                 <div class="col-lg-6 col-md-12 mb-30">
                     <div class="form-box">
                         <h5>Get in touch</h5>
-                        <form method="post" class="contact__form" action="/contact">
+                        <form method="post" action="/contact" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <input name="name" type="text" placeholder="Your Name *" required>
@@ -131,7 +141,7 @@
                                     <input name="subject" type="text" placeholder="Subject *" required>
                                 </div>
                                 <div class="col-md-12 form-group">
-                                    <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *"
+                                    <textarea name="message" id="message" cols="30" rows="4" placeholder="Your Query *"
                                         required></textarea>
                                 </div>
                                 <div class="col-md-12">
@@ -168,13 +178,13 @@
                                     </div>
                                     <div class="footer-contact-link-content">
                                         <h6>Call us</h6>
-                                        <p>+91 9601406607</p>
+                                        <p>+919601406607</p>
                                     </div>
                                 </div>
                                 <div class="footer-contact-links-divider"></div>
                                 <div class="footer-contact-link-wrapper">
                                     <div class="image-wrapper footer-contact-link-icon">
-                                        <div class="icon-footer"> <i class="omfi-envelope"></i> </div>
+                                        <div class="icon-footer"> <i class="far fa-envelope"></i> </div>
                                     </div>
                                     <div class="footer-contact-link-content">
                                         <h6>Email Us</h6>
@@ -184,14 +194,26 @@
                                 <div class="footer-contact-links-divider"></div>
                                 <div class="footer-contact-link-wrapper">
                                     <div class="image-wrapper footer-contact-link-icon">
-                                        <div class="icon-footer"> <i class="omfi-location"></i> </div>
+                                        <div class="icon-footer"> <i class="far fa-building	"></i> </div>
                                     </div>
                                     <div class="footer-contact-link-content">
-                                        <h6>Address</h6>
-                                        <p>402, Shangrila Arcade, near Shyamal Cross Road,<br> Ahmedabad, Gujarat 380015
-                                        </p>
+                                        <h6>Head Office</h6>
+                                        <p>73 HOLBURN STREET, ABERDEEN, AB10 6DN, UNITED KINGDOM</p>
+                                    </div>
+
+                                </div>
+                                <div class="footer-contact-links-divider"></div>
+                                <div class="footer-contact-link-wrapper">
+                                    <div class="image-wrapper footer-contact-link-icon">
+                                        <div class="icon-footer"> <i class="omfi-location"></i> </div>
+                                    </div>
+
+                                    <div class="footer-contact-link-content">
+                                        <h6>Branch - Ahmedabad</h6>
+                                        <p>402, SHANGRILA ARCADE, NEAR SHYAMAL CROSS ROAD, AHEMDABAD, INDIA</p>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -227,6 +249,8 @@
                             <ul>
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/contact">Contact</a></li>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/terms-condition">Terms & Conditions</a></li>
                             </ul>
                         </div>
                     </div>
@@ -249,7 +273,7 @@
             <div class="bottom-footer-text">
                 <div class="row copyright">
                     <div class="col-md-12">
-                        <p class="mb-0">&copy;2025 <a href="/">Quickoo Pvt. Ltd.</a>. All rights reserved.</p>
+                        <p class="mb-0">&copy;2025 <a href="/">Quickoo Tech Transport Pvt. Ltd.</a>. All rights reserved.</p>
                     </div>
                 </div>
             </div>
@@ -259,10 +283,10 @@
     <!-- Toast Container -->
     <div aria-live="polite" aria-atomic="true" class="position-relative">
         <div class="toast-container position-fixed top-0 end-0 p-3">
-            {% with messages = get_flashed_messages() %}
+            {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
-            {% for msg in messages %}
-            <div class="toast align-items-center text-bg-success border-0 show" role="alert" aria-live="assertive"
+            {% for category, msg in messages %}
+            <div class="toast align-items-center text-bg-{{category}} border-0 show" role="alert" aria-live="assertive"
                 aria-atomic="true">
                 <div class="d-flex">
                     <div class="toast-body">
